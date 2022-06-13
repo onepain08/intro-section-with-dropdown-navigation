@@ -1,0 +1,43 @@
+.navbar{
+    width: 100%;
+    height: 5.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1.3rem;
+}
+
+.navbar li a{
+    font-size:15px;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    letter-spacing: -0.03rem;
+}
+.navbar li{
+    margin-bottom: 0.7rem;
+    margin-right: 2rem;
+}
+.navbar li:last-child{
+    margin-left: 0.5rem;
+}
+
+.navbar li a{
+    display: flex;
+    align-items: center;
+    height: 24px;
+}
+
+.navbar-logo{
+    margin: 0 2.55rem;
+}
+.navbar-login{
+    margin-left: auto;
+}
+
+
+
