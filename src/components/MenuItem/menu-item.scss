@@ -1,0 +1,11 @@
+
+.menu-item{
+    display: flex;
+    justify-content: space-between;
+    min-width: 7rem;
+
+    img{
+        max-width: 2rem;
+
+    }
+}

@@ -1,0 +1,92 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 71.5625rem;
+  margin: auto;
+}
+
+.header .header-text-content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .header-text-content h1 {
+  margin-top: 8.6rem;
+  margin-bottom: 3rem;
+  margin-right: 2rem;
+  padding: 0 0.3rem;
+  text-align: left;
+  font-size: 5rem;
+}
+
+.header .header-text-content p {
+  text-align: left;
+  max-width: 30rem;
+  line-height: 28px;
+  color: dimgray;
+}
+
+.header .header-text-content button {
+  width: 10rem;
+  background-color: #141414;
+  color: #fafafa;
+  border-radius: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1.05rem 1.3rem;
+  margin-top: 3.2rem;
+  margin-bottom: 6.7rem;
+}
+
+.header .header-text-content .header-company-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.header .header-text-content .header-company-logos img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header .header-hero-image {
+  max-width: 30.0625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem 0;
+}
+
+.header .header-hero-image img {
+  max-width: 30.0625rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  margin-top: auto;
+}
+/*# sourceMappingURL=header.css.map */
