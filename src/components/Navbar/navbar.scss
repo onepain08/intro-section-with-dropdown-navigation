@@ -39,51 +39,61 @@ $almost-white: hsl(0, 0%, 98%);
         margin-bottom: 0.5rem;
     }
 
-    ul{
+    .navbar-links{
         display: flex;
         justify-content: flex-start;
         margin-left: 1.3rem;
+
+        li a, .navbar-login{
+            font-size:15px;
+            font-weight: 500;
+            color: $medium-gray;
+            letter-spacing: -0.03rem;
+        }
+    
+        li{
+            margin-bottom: 0.7rem;
+            margin-right: 2rem;
+        }
+        li:last-child{
+            margin-left: 0.5rem;
+        }
+        li a{
+            display: flex;
+            align-items: center;
+            height: 24px;
+        }
     }
 
-    li a, .navbar-login{
-        font-size:15px;
-        font-weight: 500;
-        color: $medium-gray;
-        letter-spacing: -0.03rem;
-    }
 
-    li{
-        margin-bottom: 0.7rem;
-        margin-right: 2rem;
-    }
-    li:last-child{
-        margin-left: 0.5rem;
-    }
-    li a{
-        display: flex;
-        align-items: center;
-        height: 24px;
-    }
-
-    .navbar-features-menu{
+    .navbar-menus{
         position: absolute;
-        top: 4.3rem;
-        left: 7rem;
-        padding: 1.5rem 1.5rem;
+        padding: 1.5rem 1.6rem;
         border-radius: 0.7rem;
         box-shadow: rgba(230,230,230,255) 10px 10px 30px, rgba(230,230,230,255) -5px -5px 30px;
+        background-color: #fff;
         ul{
             display: flex;
             flex-direction: column;
             margin: 0 0;
 
-            li{
-                margin: 0;
-                padding: 0;
-                
+            li:not(:last-child){
+                margin-bottom: 1rem;
             }
-        }
 
+        }
+    }
+    .navbar-features-menu{
+        top: 4.3rem;
+        left: 7rem;
+    }
+
+    .navbar-company-menu{
+        top: 4.3rem;
+        left: 19rem;
+        img{
+            display: none;
+        }
     }
 
 }

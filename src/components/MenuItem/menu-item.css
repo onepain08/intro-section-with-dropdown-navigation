@@ -2,13 +2,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-width: 7rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9rem;
 }
 
 .menu-item img {
-  max-width: 2rem;
+  max-width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left;
+     object-position: left;
+}
+
+.menu-item h4 {
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  color: dimgray;
 }
 /*# sourceMappingURL=menu-item.css.map */

@@ -45,7 +45,7 @@
   margin-bottom: 0.5rem;
 }
 
-.navbar ul {
+.navbar .navbar-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,23 +55,23 @@
   margin-left: 1.3rem;
 }
 
-.navbar li a, .navbar .navbar-login {
+.navbar .navbar-links li a, .navbar .navbar-links .navbar-login {
   font-size: 15px;
   font-weight: 500;
   color: dimgray;
   letter-spacing: -0.03rem;
 }
 
-.navbar li {
+.navbar .navbar-links li {
   margin-bottom: 0.7rem;
   margin-right: 2rem;
 }
 
-.navbar li:last-child {
+.navbar .navbar-links li:last-child {
   margin-left: 0.5rem;
 }
 
-.navbar li a {
+.navbar .navbar-links li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,17 +81,16 @@
   height: 24px;
 }
 
-.navbar .navbar-features-menu {
+.navbar .navbar-menus {
   position: absolute;
-  top: 4.3rem;
-  left: 7rem;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 1.6rem;
   border-radius: 0.7rem;
   -webkit-box-shadow: #e6e6e6 10px 10px 30px, #e6e6e6 -5px -5px 30px;
           box-shadow: #e6e6e6 10px 10px 30px, #e6e6e6 -5px -5px 30px;
+  background-color: #fff;
 }
 
-.navbar .navbar-features-menu ul {
+.navbar .navbar-menus ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,8 +101,21 @@
   margin: 0 0;
 }
 
-.navbar .navbar-features-menu ul li {
-  margin: 0;
-  padding: 0;
+.navbar .navbar-menus ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.navbar .navbar-features-menu {
+  top: 4.3rem;
+  left: 7rem;
+}
+
+.navbar .navbar-company-menu {
+  top: 4.3rem;
+  left: 19rem;
+}
+
+.navbar .navbar-company-menu img {
+  display: none;
 }
 /*# sourceMappingURL=navbar.css.map */

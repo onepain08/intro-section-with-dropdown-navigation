@@ -1,11 +1,22 @@
+$medium-gray: hsl(0, 0%, 41%);
 
 .menu-item{
     display: flex;
-    justify-content: space-between;
-    min-width: 7rem;
+    align-items: center;
+    // justify-content: left;
+    gap: 0.9rem;
 
     img{
-        max-width: 2rem;
+        max-width: 1.5rem;
+        object-fit: contain;
+        object-position: left;
+    }
 
+    h4{
+        text-align: left;
+        font-weight:500;
+        font-size: 14px;
+        color: $medium-gray;
+        
     }
 }
