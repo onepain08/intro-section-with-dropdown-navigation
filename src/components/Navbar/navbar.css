@@ -55,7 +55,7 @@
   margin-left: 1.3rem;
 }
 
-.navbar .navbar-links li a, .navbar .navbar-links .navbar-login {
+.navbar .navbar-links li a, .navbar .navbar-links .navbar-login, .navbar .navbar-links #features, .navbar .navbar-links #company {
   font-size: 15px;
   font-weight: 500;
   color: dimgray;
@@ -71,7 +71,7 @@
   margin-left: 0.5rem;
 }
 
-.navbar .navbar-links li a {
+.navbar .navbar-links li a, .navbar .navbar-links #features, .navbar .navbar-links #company {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,5 +117,9 @@
 
 .navbar .navbar-company-menu img {
   display: none;
+}
+
+#features, #company {
+  cursor: pointer;
 }
 /*# sourceMappingURL=navbar.css.map */

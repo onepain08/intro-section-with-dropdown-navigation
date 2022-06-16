@@ -44,7 +44,7 @@ $almost-white: hsl(0, 0%, 98%);
         justify-content: flex-start;
         margin-left: 1.3rem;
 
-        li a, .navbar-login{
+        li a, .navbar-login, #features, #company{
             font-size:15px;
             font-weight: 500;
             color: $medium-gray;
@@ -58,13 +58,13 @@ $almost-white: hsl(0, 0%, 98%);
         li:last-child{
             margin-left: 0.5rem;
         }
-        li a{
+        li a, #features, #company{
             display: flex;
             align-items: center;
             height: 24px;
         }
     }
-
+    
 
     .navbar-menus{
         position: absolute;
@@ -96,4 +96,7 @@ $almost-white: hsl(0, 0%, 98%);
         }
     }
 
+}
+#features, #company{
+    cursor: pointer;
 }
