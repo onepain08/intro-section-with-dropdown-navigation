@@ -2,6 +2,7 @@ import React from 'react'
 import './header.css'
 
 //Assetts
+import {heroImageMobile,} from '../../assets/assets'
 import heroImage from '../../assets/image-hero-desktop.png'
 import databiz from '../../assets/client-databiz.svg'
 import audiphile from '../../assets/client-audiophile.svg'
@@ -13,7 +14,7 @@ const Header = () => {
     <div className='header'>
         <div className='header-text-content'>
             <h1>Make remote work</h1>
-            <p>Get your team in sync, cno matter your location. Streamline processes, create team rituals, and watch productivity soar</p>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
             <button>Learn more</button>
             <div className='header-company-logos'>
                 <img src={databiz} alt="" />
@@ -24,6 +25,9 @@ const Header = () => {
         </div>
         <div className='header-hero-image'>
             <img src={heroImage} alt='' />
+        </div>
+        <div className='header-hero-image-mobile'>
+          <img src={heroImageMobile} alt="" />
         </div>
     </div>
   )

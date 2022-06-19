@@ -16,6 +16,10 @@
   margin: 0 2.55rem;
 }
 
+.navbar .navbar-hamburger-btn {
+  display: none;
+}
+
 .navbar .navbar-login {
   margin-left: auto;
   -ms-flex-item-align: center;
@@ -121,5 +125,74 @@
 
 #features, #company {
   cursor: pointer;
+}
+
+@media (max-width: 875px) {
+  .navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 4.8rem;
+  }
+  .navbar .navbar-logo {
+    margin: 1rem 1rem;
+  }
+  .navbar .navbar-login {
+    display: none;
+  }
+  .navbar .navbar-login img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .navbar .navbar-hamburger-btn {
+    display: block;
+    margin: 1rem 1rem;
+  }
+  .navbar .navbar-register {
+    display: none;
+  }
+  .navbar .navbar-links {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: white;
+    padding: 0;
+  }
+  .navbar .navbar-links .navbar-hamburger-exit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  .navbar .navbar-links li a, .navbar .navbar-links .navbar-login, .navbar .navbar-links #features, .navbar .navbar-links #company {
+    font-size: 15px;
+    font-weight: 500;
+    color: dimgray;
+    letter-spacing: -0.03rem;
+  }
+  .navbar .navbar-links li {
+    margin-bottom: 0.7rem;
+    margin-right: 2rem;
+  }
+  .navbar .navbar-links li:last-child {
+    margin-left: 0.5rem;
+  }
+  .navbar .navbar-links li a, .navbar .navbar-links #features, .navbar .navbar-links #company {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 24px;
+  }
 }
 /*# sourceMappingURL=navbar.css.map */

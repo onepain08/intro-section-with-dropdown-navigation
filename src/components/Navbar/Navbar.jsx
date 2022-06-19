@@ -6,13 +6,13 @@ import {MenuItem,} from '../index'
 
 //Assets
 import logo from '../../assets/logo.svg'
-import {todo, calendar, reminders, planning,} from '../../assets/assets'
+import {todo, calendar, reminders, planning, menuBtn, closeMenu} from '../../assets/assets'
 
 const Navbar = () => {
 
   const [openFeatures, setOpenFeatures] = React.useState(false)
   const [openCompany, setOpenCompany] = React.useState(false)
-
+  const [openMobileMenu, setOpenMenuMobile] = React.useState(false)
 
   const menu = {
     hidden: {height: 0, padding: '0 0', },
@@ -26,12 +26,23 @@ const Navbar = () => {
     exit: {opacity: [0.8,0.6,0,0,0],x:100, transition: {duration: 0.2}}
   }
 
+  const mobileMenu ={
+    hidden: {width:0, height:0},
+    visible: {width: '65%', height: '100%', padding: '1.3rem 1.3rem'},
+  }
+
   return (
     <div className='navbar'>
         <div className='navbar-logo' id='logo'>
           <img src={logo} alt='logo' />
         </div>
-        <ul className='navbar-links'>
+        <div className='navbar-hamburger-btn'>
+          <img src={menuBtn} alt="" onClick={()=>{setOpenMenuMobile(!openMobileMenu)}} />
+        </div>
+        <motion.ul className='navbar-links' initial='hidden' animate={openMobileMenu ? 'visible' : ''} variants={mobileMenu}>
+            {openMobileMenu &&<div className='navbar-hamburger-exit' onClick={()=>{setOpenMenuMobile(!openMobileMenu)}}>
+                <img src={closeMenu} alt="" />
+              </div>}
             <li onClick={() => {setOpenFeatures(!openFeatures)}}>
               <div id='features'>
                 Features<span className='material-symbols-outlined'>expand_more</span>
@@ -44,7 +55,7 @@ const Navbar = () => {
             </li>
             <li><a href='#logo' id='careers'>Careers</a></li>
             <li><a href='#logo'>About</a></li>
-        </ul>
+        </motion.ul>
         <div className='navbar-login'>Login</div>
         <button className='navbar-register'>Register</button>
         <AnimatePresence>

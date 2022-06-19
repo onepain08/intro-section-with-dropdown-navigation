@@ -13,6 +13,10 @@ $almost-white: hsl(0, 0%, 98%);
     .navbar-logo{
         margin: 0 2.55rem;
     }
+
+    .navbar-hamburger-btn{
+        display: none;
+    }
     .navbar-login{
         margin-left: auto;
         align-self: center;
@@ -99,4 +103,65 @@ $almost-white: hsl(0, 0%, 98%);
 }
 #features, #company{
     cursor: pointer;
+}
+
+@media(max-width: 875px){
+    .navbar{
+        justify-content: space-between;
+        width: 100%;
+        height: 4.8rem;
+
+        .navbar-logo{
+            margin: 1rem 1rem;
+        }
+        .navbar-login{
+            display: none;
+            img{
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+        .navbar-hamburger-btn{
+            display: block;
+            margin: 1rem 1rem;
+        }
+        .navbar-register{
+            display: none;
+        }
+        .navbar-links{
+            display: block;
+            position:fixed;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            background: white;
+            padding: 0;
+
+            .navbar-hamburger-exit{
+                display: flex;
+                justify-content: right;
+            }
+            li a, .navbar-login, #features, #company{
+                font-size:15px;
+                font-weight: 500;
+                color: $medium-gray;
+                letter-spacing: -0.03rem;
+            }
+        
+            li{
+                margin-bottom: 0.7rem;
+                margin-right: 2rem;
+            }
+            li:last-child{
+                margin-left: 0.5rem;
+            }
+            li a, #features, #company{
+                display: flex;
+                align-items: center;
+                height: 24px;
+            }
+        }
+
+    }
 }

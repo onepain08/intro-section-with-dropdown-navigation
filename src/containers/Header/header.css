@@ -48,6 +48,12 @@
   margin-bottom: 6.7rem;
 }
 
+.header .header-text-content button:hover {
+  background: white;
+  color: #141414;
+  border: 1px solid black;
+}
+
 .header .header-text-content .header-company-logos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,5 +94,102 @@
   -o-object-position: center;
      object-position: center;
   margin-top: auto;
+}
+
+.header .header-hero-image-mobile {
+  display: none;
+}
+
+@media (max-width: 875px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .header .header-hero-image {
+    display: none;
+  }
+  .header .header-hero-image-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0 0;
+  }
+  .header .header-hero-image-mobile img {
+    width: 100%;
+    max-height: 38vh;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+    -o-object-position: center;
+       object-position: center;
+    margin-top: auto;
+  }
+  .header .header-text-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .header-text-content h1 {
+    margin: 3rem 0;
+    margin-bottom: 1.2rem;
+    padding: 0;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  .header .header-text-content p {
+    margin: auto;
+    max-width: 22rem;
+    text-align: center;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 500;
+    color: dimgray;
+  }
+  .header .header-text-content button {
+    width: 8.5rem;
+    background-color: #141414;
+    color: #fafafa;
+    border-radius: 1rem;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.9rem 1.1rem;
+    margin: 1.6rem auto;
+  }
+  .header .header-text-content .header-company-logos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    height: 2rem;
+    width: 100%;
+    margin-top: 1.2rem;
+  }
+  .header .header-text-content .header-company-logos img {
+    height: 1.6rem;
+    width: 4.5rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+  }
 }
 /*# sourceMappingURL=header.css.map */
