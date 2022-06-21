@@ -27,8 +27,15 @@ const Navbar = () => {
   }
 
   const mobileMenu ={
-    hidden: {width:0, height:0},
-    visible: {width: '65%', height: '100%', padding: '1.3rem 1.3rem'},
+    hidden: {width:0, height:0, padding: 0},
+    visible: {width: '64%', height: '100%', padding: '1.3rem 1.3rem'},
+  }
+
+  const features ={
+    visible: {height: '12rem'}
+  }
+  const company ={
+    visible: {height: '9rem'}
   }
 
   return (
@@ -39,26 +46,51 @@ const Navbar = () => {
         <div className='navbar-hamburger-btn'>
           <img src={menuBtn} alt="" onClick={()=>{setOpenMenuMobile(!openMobileMenu)}} />
         </div>
-        <motion.ul className='navbar-links' initial='hidden' animate={openMobileMenu ? 'visible' : ''} variants={mobileMenu}>
+        <motion.ul className='navbar-links'  animate={openMobileMenu ? 'visible' : ''} exit='hidden' variants={mobileMenu}>
             {openMobileMenu &&<div className='navbar-hamburger-exit' onClick={()=>{setOpenMenuMobile(!openMobileMenu)}}>
                 <img src={closeMenu} alt="" />
-              </div>}
+            </div>}
             <li onClick={() => {setOpenFeatures(!openFeatures)}}>
-              <div id='features'>
-                Features<span className='material-symbols-outlined'>expand_more</span>
-              </div>
+              <motion.div id='features' animate={openFeatures & openMobileMenu ? 'visible' : ''} variants={features}>
+                <div>
+                  Features<span className='material-symbols-outlined'>expand_more</span>
+                </div>
+                <AnimatePresence>
+                  {openFeatures && <motion.div key='features' className='navbar-menus navbar-features-menu' initial='hidden' animate='visible' exit='exit' variants={menu}>
+                    <ul>
+                      <MenuItem variants={menuItem} img={todo} text={'Todo List'} />
+                      <MenuItem variants={menuItem} img={calendar} text={'Calendar'} />
+                      <MenuItem variants={menuItem} img={reminders} text={'Reminders'} />
+                      <MenuItem variants={menuItem} img={planning} text={'Planning'} />
+                    </ul>
+                  </motion.div>}
+                </AnimatePresence>
+              </motion.div>
             </li>
             <li onClick={()=>{setOpenCompany(!openCompany)}}>
-              <div id='company'>
-                Company<span className='material-symbols-outlined'>expand_more</span>
-              </div>
+              <motion.div id='company' animate={openCompany & openMobileMenu ? 'visible': ''} variants={company}>
+                <div>
+                  Company<span className='material-symbols-outlined'>expand_more</span>
+                </div>
+                <AnimatePresence>
+                  {openCompany &&<motion.div key='company' className='navbar-menus navbar-company-menu' initial='hidden' animate='visible' exit='exit' variants={menu}>
+                    <ul>
+                      <MenuItem variants={menuItem} text='History' />
+                      <MenuItem variants={menuItem} text='Our Team' />
+                      <MenuItem variants={menuItem} text='Blog' />
+                    </ul>
+                  </motion.div>}
+                </AnimatePresence>
+              </motion.div>
             </li>
             <li><a href='#logo' id='careers'>Careers</a></li>
             <li><a href='#logo'>About</a></li>
+            {openMobileMenu &&<div className='navbar-login-mobile'>Login</div>}
+            {openMobileMenu &&<button className='navbar-register-mobile'>Register</button>}
         </motion.ul>
         <div className='navbar-login'>Login</div>
         <button className='navbar-register'>Register</button>
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {openFeatures && <motion.div key='features' className='navbar-menus navbar-features-menu' initial='hidden' animate='visible' exit='exit' variants={menu}>
             <ul>
               <MenuItem variants={menuItem} img={todo} text={'Todo List'} />
@@ -67,8 +99,8 @@ const Navbar = () => {
               <MenuItem variants={menuItem} img={planning} text={'Planning'} />
             </ul>
           </motion.div>}
-        </AnimatePresence>
-        <AnimatePresence>
+        </AnimatePresence> */}
+        {/* <AnimatePresence>
           {openCompany &&<motion.div key='company' className='navbar-menus navbar-company-menu' initial='hidden' animate='visible' exit='exit' variants={menu}>
             <ul>
               <MenuItem variants={menuItem} text='History' />
@@ -76,7 +108,7 @@ const Navbar = () => {
               <MenuItem variants={menuItem} text='Blog' />
             </ul>
           </motion.div>}
-        </AnimatePresence>
+        </AnimatePresence> */}
     </div>
   )
 }

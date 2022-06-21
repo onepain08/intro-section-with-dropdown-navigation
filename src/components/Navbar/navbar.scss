@@ -47,6 +47,7 @@ $almost-white: hsl(0, 0%, 98%);
         display: flex;
         justify-content: flex-start;
         margin-left: 1.3rem;
+        
 
         li a, .navbar-login, #features, #company{
             font-size:15px;
@@ -121,6 +122,7 @@ $almost-white: hsl(0, 0%, 98%);
                 object-position: center;
             }
         }
+        
         .navbar-hamburger-btn{
             display: block;
             margin: 1rem 1rem;
@@ -141,27 +143,87 @@ $almost-white: hsl(0, 0%, 98%);
             .navbar-hamburger-exit{
                 display: flex;
                 justify-content: right;
+                margin-bottom: 2rem;
             }
-            li a, .navbar-login, #features, #company{
-                font-size:15px;
+            li a, #features, #company{
+                font-size:16px;
                 font-weight: 500;
                 color: $medium-gray;
                 letter-spacing: -0.03rem;
+                min-height: 2rem;
             }
         
             li{
-                margin-bottom: 0.7rem;
-                margin-right: 2rem;
+                margin-bottom: 1.1rem;
             }
             li:last-child{
-                margin-left: 0.5rem;
+                margin-left: 0;
             }
-            li a, #features, #company{
-                display: flex;
-                align-items: center;
-                height: 24px;
-            }
+            
+        }
+        .navbar-login-mobile{
+            text-align: center;
+            font-size:14px;
+            font-weight: 500;
+            color: $medium-gray;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .navbar-register-mobile{
+            width: 100%;
+        border: $medium-gray solid 2px;
+        border-radius: 1rem;
+        padding: 0.6rem 1.2rem;
+        color: $medium-gray;
+        background-color: white;
+        font-size: 15px;
+        font-weight: 600;
         }
 
+        .navbar-menus{
+            position: static;
+            padding: 1.5rem 1.6rem;
+            border-radius: 0.7rem;
+            box-shadow: none;
+            background-color: #fff;
+            ul{
+                display: flex;
+                flex-direction: column;
+                margin: 0 0;
+                
+                li{
+                    img{
+                        width: 1.1rem;
+                    }
+                }
+                li:not(:last-child){
+                    margin-bottom: 1.2rem;
+                }
+                h4{
+                    font-size: 16px;
+                }
+            }
+        }
+        // .navbar-features-menu{
+            
+            
+        // }
+    
+        .navbar-company-menu{
+        
+            img{
+                display: none;
+            }
+        }
+        #features, #company{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            
+
+            div{
+                align-self: flex-start;
+            }
+        }
     }
 }

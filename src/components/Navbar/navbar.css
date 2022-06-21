@@ -171,28 +171,82 @@
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
+    margin-bottom: 2rem;
   }
-  .navbar .navbar-links li a, .navbar .navbar-links .navbar-login, .navbar .navbar-links #features, .navbar .navbar-links #company {
-    font-size: 15px;
+  .navbar .navbar-links li a, .navbar .navbar-links #features, .navbar .navbar-links #company {
+    font-size: 16px;
     font-weight: 500;
     color: dimgray;
     letter-spacing: -0.03rem;
+    min-height: 2rem;
   }
   .navbar .navbar-links li {
-    margin-bottom: 0.7rem;
-    margin-right: 2rem;
+    margin-bottom: 1.1rem;
   }
   .navbar .navbar-links li:last-child {
-    margin-left: 0.5rem;
+    margin-left: 0;
   }
-  .navbar .navbar-links li a, .navbar .navbar-links #features, .navbar .navbar-links #company {
+  .navbar .navbar-login-mobile {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: dimgray;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .navbar .navbar-register-mobile {
+    width: 100%;
+    border: dimgray solid 2px;
+    border-radius: 1rem;
+    padding: 0.6rem 1.2rem;
+    color: dimgray;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .navbar .navbar-menus {
+    position: static;
+    padding: 1.5rem 1.6rem;
+    border-radius: 0.7rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: #fff;
+  }
+  .navbar .navbar-menus ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0;
+  }
+  .navbar .navbar-menus ul li img {
+    width: 1.1rem;
+  }
+  .navbar .navbar-menus ul li:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+  .navbar .navbar-menus ul h4 {
+    font-size: 16px;
+  }
+  .navbar .navbar-company-menu img {
+    display: none;
+  }
+  .navbar #features, .navbar #company {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar #features div, .navbar #company div {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 /*# sourceMappingURL=navbar.css.map */
