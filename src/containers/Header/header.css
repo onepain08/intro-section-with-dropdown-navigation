@@ -39,6 +39,7 @@
 .header .header-text-content button {
   width: 10rem;
   background-color: #141414;
+  border: 1px solid black;
   color: #fafafa;
   border-radius: 1rem;
   font-size: 18px;
@@ -52,6 +53,7 @@
   background: white;
   color: #141414;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .header .header-text-content .header-company-logos {

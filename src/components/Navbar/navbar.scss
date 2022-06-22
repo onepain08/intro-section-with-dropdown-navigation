@@ -21,6 +21,7 @@ $almost-white: hsl(0, 0%, 98%);
         margin-left: auto;
         align-self: center;
         height: 24px;
+        color: $medium-gray;
         cursor: pointer;
     }
     .navbar-login:hover, .navbar-register:hover, ul li a:hover{
@@ -205,10 +206,6 @@ $almost-white: hsl(0, 0%, 98%);
                 }
             }
         }
-        // .navbar-features-menu{
-            
-            
-        // }
     
         .navbar-company-menu{
         

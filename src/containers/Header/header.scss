@@ -31,6 +31,7 @@
         button{
             width: 10rem;
             background-color: hsl(0, 0%, 8%);
+            border: 1px solid black;
             color: hsl(0, 0%, 98%);
             border-radius: 1rem;
             font-size: 18px;
@@ -43,6 +44,7 @@
             background: white;
             color: hsl(0, 0%, 8%);
             border: 1px solid black;
+            cursor: pointer;
         }
 
         .header-company-logos{

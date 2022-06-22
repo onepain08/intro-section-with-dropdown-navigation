@@ -26,6 +26,7 @@
       -ms-grid-row-align: center;
       align-self: center;
   height: 24px;
+  color: dimgray;
   cursor: pointer;
 }
 
