@@ -56,6 +56,9 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 1.3rem;
 }
 
@@ -177,11 +180,11 @@
     font-size: 16px;
     font-weight: 500;
     color: dimgray;
-    letter-spacing: -0.03rem;
+    letter-spacing: 0rem;
     min-height: 2rem;
   }
   .navbar .navbar-links li {
-    margin-bottom: 1.1rem;
+    margin-bottom: 0.6rem;
   }
   .navbar .navbar-links li:last-child {
     margin-left: 0;
@@ -243,10 +246,23 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .navbar #features div, .navbar #company div {
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+  .navbar #features div img, .navbar #company div img {
+    margin-left: 0.7rem;
+  }
+  .navbar .shadow-overlay {
+    z-index: 5;
+    position: absolute;
+    width: 36%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.67);
   }
 }
 /*# sourceMappingURL=navbar.css.map */

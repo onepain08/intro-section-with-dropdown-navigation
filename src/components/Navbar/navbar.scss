@@ -46,6 +46,7 @@ $almost-white: hsl(0, 0%, 98%);
     .navbar-links{
         display: flex;
         justify-content: flex-start;
+        align-items: center;
         margin-left: 1.3rem;
         
 
@@ -149,12 +150,12 @@ $almost-white: hsl(0, 0%, 98%);
                 font-size:16px;
                 font-weight: 500;
                 color: $medium-gray;
-                letter-spacing: -0.03rem;
+                letter-spacing: 0rem;
                 min-height: 2rem;
             }
         
             li{
-                margin-bottom: 1.1rem;
+                margin-bottom: 0.6rem;
             }
             li:last-child{
                 margin-left: 0;
@@ -219,11 +220,22 @@ $almost-white: hsl(0, 0%, 98%);
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            
+            justify-content: center;
 
             div{
                 align-self: flex-start;
+
+                img{
+                    margin-left: 0.7rem;
+                }
             }
+        }
+        .shadow-overlay{
+            z-index: 5;
+            position: absolute;
+            width: 36%;
+            height: 200%;
+            background: rgba(0, 0, 0, 0.67);
         }
     }
 }

@@ -6,7 +6,7 @@ import {MenuItem,} from '../index'
 
 //Assets
 import logo from '../../assets/logo.svg'
-import {todo, calendar, reminders, planning, menuBtn, closeMenu} from '../../assets/assets'
+import {todo, calendar, reminders, planning, menuBtn, closeMenu, arrowUp, arrowDown} from '../../assets/assets'
 
 const Navbar = () => {
 
@@ -32,10 +32,10 @@ const Navbar = () => {
   }
 
   const features ={
-    visible: {height: '12rem'}
+    visible: {height: '13rem'}
   }
   const company ={
-    visible: {height: '9rem'}
+    visible: {height: '11rem'}
   }
 
   return (
@@ -53,7 +53,7 @@ const Navbar = () => {
             <li onClick={() => {setOpenFeatures(!openFeatures)}}>
               <motion.div id='features' animate={openFeatures & openMobileMenu ? 'visible' : ''} variants={features}>
                 <div>
-                  Features<span className='material-symbols-outlined'>expand_more</span>
+                  Features <img src={openFeatures? arrowUp : arrowDown} alt="" />
                 </div>
                 <AnimatePresence>
                   {openFeatures && <motion.div key='features' className='navbar-menus navbar-features-menu' initial='hidden' animate='visible' exit='exit' variants={menu}>
@@ -70,7 +70,7 @@ const Navbar = () => {
             <li onClick={()=>{setOpenCompany(!openCompany)}}>
               <motion.div id='company' animate={openCompany & openMobileMenu ? 'visible': ''} variants={company}>
                 <div>
-                  Company<span className='material-symbols-outlined'>expand_more</span>
+                  Company<img src={openCompany? arrowUp : arrowDown} alt="" />
                 </div>
                 <AnimatePresence>
                   {openCompany &&<motion.div key='company' className='navbar-menus navbar-company-menu' initial='hidden' animate='visible' exit='exit' variants={menu}>
@@ -90,25 +90,7 @@ const Navbar = () => {
         </motion.ul>
         <div className='navbar-login'>Login</div>
         <button className='navbar-register'>Register</button>
-        {/* <AnimatePresence>
-          {openFeatures && <motion.div key='features' className='navbar-menus navbar-features-menu' initial='hidden' animate='visible' exit='exit' variants={menu}>
-            <ul>
-              <MenuItem variants={menuItem} img={todo} text={'Todo List'} />
-              <MenuItem variants={menuItem} img={calendar} text={'Calendar'} />
-              <MenuItem variants={menuItem} img={reminders} text={'Reminders'} />
-              <MenuItem variants={menuItem} img={planning} text={'Planning'} />
-            </ul>
-          </motion.div>}
-        </AnimatePresence> */}
-        {/* <AnimatePresence>
-          {openCompany &&<motion.div key='company' className='navbar-menus navbar-company-menu' initial='hidden' animate='visible' exit='exit' variants={menu}>
-            <ul>
-              <MenuItem variants={menuItem} text='History' />
-              <MenuItem variants={menuItem} text='Our Team' />
-              <MenuItem variants={menuItem} text='Blog' />
-            </ul>
-          </motion.div>}
-        </AnimatePresence> */}
+        {openMobileMenu &&<div className='shadow-overlay'></div>}
     </div>
   )
 }
